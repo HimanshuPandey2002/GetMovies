@@ -1,0 +1,6 @@
+The App Should include:
+	- Latest Movies
+	- Trending Movies
+	- All Time favourites
+	- Dark Mode & Light mode
+	- Loading Screen

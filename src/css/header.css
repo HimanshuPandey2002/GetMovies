@@ -1,0 +1,85 @@
+header {
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5rem;
+}
+
+header .logo {
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+header .form {
+  min-width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+header .form input {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-left: 2.3rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .form input:focus {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+header .form button {
+  padding: 0.5rem;
+  border: none;
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .nav li {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+header .nav li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=header.css.map */
