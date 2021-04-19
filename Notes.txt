@@ -1,6 +1,20 @@
 The App Should include:
-	- Latest Movies
-	- Trending Movies
-	- All Time favourites
 	- Dark Mode & Light mode
 	- Loading Screen
+
+
+- Get Latest
+- Get Trending
+- Get Popular
+- Get Top Rated
+- Get Upcoming
+
+- Get Similar
+- Get Videos
+
+
+**** What to do today ******
+
+- complete API work
+- Create Modal section
+- Dark Mode if possible

@@ -1,3 +1,5 @@
-.App {
-  text-align: center;
+@import url('./css/Light_mode.css');
+
+body {
+    background-color: var(--bg-main);
 }

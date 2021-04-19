@@ -1,0 +1,19 @@
+:root{
+    --bg-main: rgb(211, 211, 211);
+    --bg-sec: #fff;
+    --shadow-main: rgba(0,0,0,0.2);
+    --hover-main: rgba(0,0,0,0.1);
+    --bdr-btm: rgba(0,0,0,0.4);
+    --font: rgba(0,0,0,0.8);
+    --font-sec: #000;
+}
+/* 
+:root{
+    --bg-main: rgb(43, 43, 43);
+    --bg-sec: rgb(10, 10, 10);
+    --shadow-main: rgba(0,0,0, 0.3);
+    --hover-main: rgb(44, 44, 44) ;
+    --bdr-btm: rgba(255,255,255,0.5);
+    --font: rgba(255, 255, 255, 0.8);
+    --font-sec: #fff;
+} */

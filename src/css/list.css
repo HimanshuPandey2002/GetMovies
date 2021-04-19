@@ -1,8 +1,8 @@
 .Movie-List {
-  background-color: #fff;
+  background-color: var(--bg-sec);
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 5px var(--shadow-main);
+          box-shadow: 0 2px 5px var(--shadow-main);
   width: 95%;
   margin: 1rem auto;
 }
@@ -18,25 +18,30 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--bdr-btm);
   margin: 1rem 2rem;
 }
 
 .Movie-List .topbar .heading {
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.Movie-List .topbar .extend {
-  text-decoration: underline;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--font);
 }
 
 .Movie-List .movies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: auto;
+}
+
+.extended-list {
+  margin: 1rem auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=list.css.map */

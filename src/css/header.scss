@@ -1,16 +1,17 @@
 header{
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background-color: var(--bg-sec);
+    box-shadow: 0 2px 5px var(--shadow-main);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0.5rem;
-
+    position: sticky;
+    top: 0;
     .logo{
         font-size: 18px;
         font-weight: bold;
-        opacity: 0.7;
+        color: var(--font);
     }
 
     .form{
@@ -24,17 +25,19 @@ header{
             font-size: 1.1rem;
             outline: none;
             border: none;
-            border-bottom: 1px solid rgba(0,0,0,0.5);
+            border-bottom: 1px solid var(--bdr-btm);
             width: 100%;
+            color: var(--font);
+            background-color: var(--bg-sec);
             padding-left: 2.3rem;
             transition: all 0.2s ease-in-out;
         }
 
         input:focus{
             width: 100%;
-            background-color: rgba(0,0,0,0.1);
+            background-color: var(--hover-main);
             border-radius: 5px;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid var(--bg-sec);
         }
 
         button{
@@ -60,10 +63,11 @@ header{
             padding: 0.5rem;
             border-radius: 5px ;
             transition: all 0.2s ease;
+            color: var(--font-sec);
         }
 
         li:hover{
-            background-color: rgba(0,0,0,0.1);
+            background-color: var(--hover-color);
 
         }
     }
