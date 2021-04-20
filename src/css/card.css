@@ -18,6 +18,26 @@
 
 .extended-card .details {
   padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.extended-card .details .title {
+  text-decoration: underline;
+  padding-bottom: 1rem;
+}
+
+.extended-card .details .overview {
+  padding-bottom: 2rem;
 }
 
 .movie {

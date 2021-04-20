@@ -18,6 +18,7 @@ export function List({heading, array}) {
             title={item.title}
             img_src={item.poster_path}
             rating={item.vote_average}
+            
           />
         ))}
       </div>
@@ -26,46 +27,27 @@ export function List({heading, array}) {
 }
 
 
-export function ExtendedList() {
+export function ExtendedList({array}) {
+  // if(array.length == 0)
+  //   return (
+  //     <div>
+  //       <h1>No Results Found</h1>
+  //     </div>
+  //   )
   return (
     <div className="extended-list">
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?" />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
-      <ExtendedCard
-        img_src={image}
-        overview="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias deserunt dolorem unde vitae at inventore ipsa, facilis cupiditate quod, iure laudantium in distinctio? Eum veniam deserunt tenetur dolorem provident, sint repellat ut quae in assumenda ratione animi, id minima neque est maiores ducimus. Delectus, corrupti? Exercitationem est quas reiciendis?"
-      />
+      {array != null
+        ? array.map((item) => (
+            <ExtendedCard
+              key={item.id}
+              img_src={item.poster_path}
+              release_date={item.release_date}
+              overview={item.overview}
+              title={item.title}
+              rating={item.vote_average}
+            />
+          ))
+        : ""}
     </div>
   );
 }

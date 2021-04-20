@@ -4,6 +4,8 @@ import search from "../assets/icons/search.svg";
 import Switch from './Switch';
 
 function Header() {
+
+  
     return (
       <header>
         <div className="logo">Entertainment</div>
