@@ -15,6 +15,7 @@ export function List({heading, array}) {
         {array.map((item) => (
           <Card
             key={item.id}
+            id={item.id}
             title={item.title}
             img_src={item.poster_path}
             rating={item.vote_average}
@@ -40,6 +41,7 @@ export function ExtendedList({array}) {
         ? array.map((item) => (
             <ExtendedCard
               key={item.id}
+              id={item.id}
               img_src={item.poster_path}
               release_date={item.release_date}
               overview={item.overview}

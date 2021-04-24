@@ -5,6 +5,7 @@
     margin: 0.5rem auto;
     box-shadow: 0 2px 5px var(--shadow-main);
     border-radius: 5px;
+    color: var(--font-sec);
     width: 48%;
 
 
@@ -29,10 +30,6 @@
 
         .overview{
             padding-bottom: 2rem;
-        }
-
-        .rating{
-            // text-align: left;
         }
     }
 }

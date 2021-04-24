@@ -21,8 +21,10 @@
     }
     .movies{
         display: flex;
-            overflow: auto;
-
+        overflow: auto;
+    }
+    .movies::-webkit-scrollbar{
+        display: none;
     }
 }
 

@@ -8,6 +8,7 @@
   -webkit-box-shadow: 0 2px 5px var(--shadow-main);
           box-shadow: 0 2px 5px var(--shadow-main);
   border-radius: 5px;
+  color: var(--font-sec);
   width: 48%;
 }
 

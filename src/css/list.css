@@ -35,6 +35,10 @@
   overflow: auto;
 }
 
+.Movie-List .movies::-webkit-scrollbar {
+  display: none;
+}
+
 .extended-list {
   margin: 1rem auto;
   width: 95%;
