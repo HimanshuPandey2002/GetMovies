@@ -72,6 +72,10 @@
   height: 200px;
 }
 
+.movie .hide {
+  display: none;
+}
+
 .movie:hover {
   background-color: var(--hover-main);
 }
