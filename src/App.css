@@ -1,5 +1,33 @@
 @import url('./css/Light_mode.css');
 
 body {
-    background-color: var(--bg-main);
+    /* background-color: var(--bg-main); */
+    background-image: url(http://www.glennrodger.com/wp-content/uploads/2016/12/black-background-pattern-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.NavLink{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(75, 75, 75);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

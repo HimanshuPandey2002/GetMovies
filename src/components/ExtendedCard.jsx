@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/card.css";
+import star from "../assets/icons/star-solid.svg";
 import Modal from "./Modal";
 
 const API_KEY = "269385d2";
 
-function Card({ img_src, title, rating, id }) {
+function ExtendedCard({
+  img_src,
+  overview,
+  title,
+  rating,
+  release_date,
+  id,
+}) {
   const [details, setDetails] = useState([]);
   const [similar, setSimilar] = useState([]);
   const [reviews, setReviews] = useState([]);
@@ -47,10 +55,10 @@ function Card({ img_src, title, rating, id }) {
   const showModal = () => setHide(false);
   const hideModal = () => setHide(true);
 
-  if (img_src == null || title == null) return null;
+  if (img_src == null || title == null || overview == null) return null;
   return (
     <div
-      className="movie"
+      className="extended-card"
       onClick={() => {
         getDetails(title);
         getReviews(id);
@@ -58,15 +66,18 @@ function Card({ img_src, title, rating, id }) {
         showModal();
       }}
     >
-      <img
-        src={`https://image.tmdb.org/t/p/w500${img_src}`}
-        alt=""
-        className="thumbnail"
-      />
-      <h3 className="title">{title}</h3>
-      {/* <h4 className="rating">
-        <img src={star} alt="" className="star" /> {rating}
-      </h4> */}
+      <div className="image">
+        <img src={`https://image.tmdb.org/t/p/w500${img_src}`} alt="" />
+      </div>
+      <div className="details">
+        <h2 className="title">{title}</h2>
+        <p className="overview">
+          {overview === "" ? "** NO INFORMATION AVAILABLE**" : overview}
+        </p>
+        <h4 className="rating">
+          <img src={star} alt="" className="star" /> {rating}
+        </h4>
+      </div>
       <div className={hide ? "hide" : "cont"}>
         <Modal
           title={details.Title}
@@ -91,4 +102,4 @@ function Card({ img_src, title, rating, id }) {
   );
 }
 
-export default Card;
+export default ExtendedCard;

@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import { List, ExtendedList } from "./components/List";
-// import { Card, ExtendedCard } from "./components/Card";
+import ExtendedList  from "./components/List";
 import "./css/header.css";
-import search from "./assets/icons/search.svg";
-import Switch from "./components/Switch";
+import "./App.css";
+import search_icon from "./assets/icons/search.svg";
+import Home from './Home'
+import { BrowserRouter as Router, Switch, Route , NavLink} from "react-router-dom";
+
 
 function App() {
   const API_KEY = "4c397752e5cefdf86d36ee3e05ff8a23";
+
+
+  // States
 
   const [trending, setTrending] = useState([]);
   const [popular, setPopular] = useState([]);
@@ -17,6 +21,9 @@ function App() {
   const [search, setSearch] = useState("");
   const [submit, setSubmit] = useState(" ");
   const [query, setQuery] = useState([]);
+
+
+  //Functions
 
   const getMovies = async () => {
     const response = await fetch(
@@ -34,6 +41,7 @@ function App() {
   const getSearch = (e) => {
     e.preventDefault();
     setSubmit(search);
+    setSearch("");
   };
 
   useEffect(() => {
@@ -45,7 +53,7 @@ function App() {
     const link = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`;
     const response = await fetch(link);
     const data = await response.json();
-    // console.log("Trending", data.results);
+    console.log("Trending", data.results);
     setTrending(data.results);
   };
 
@@ -80,54 +88,50 @@ function App() {
     GetPopular();
   }, []);
 
+
   return (
-    <div className="App">
-      <header>
-        <div className="logo">Entertainment</div>
-        <form className="form" onSubmit={getSearch}>
-          <input
-            type="text"
-            placeholder="Search"
-            value={search}
-            onChange={updateSearch}
-          />
-          <button type="submit">
-            <img src={search} alt="" className="search icon" />
-          </button>
-        </form>
-        <ul className="nav">
-          <li>Anime</li>
-          <li>TV Shows</li>
-          {/* <li>
-            <Switch />
-          </li> */}
-        </ul>
-      </header>
+    <Router>
+      <div className="App">
+        <header>
+          <NavLink to="/" className="NavLink">
+            <p className="logo">Entertainment</p>
+          </NavLink>
+          <form className="form" onSubmit={getSearch}>
+            <NavLink to="/s" className="NavLink input">
+              <input
+                type="text"
+                placeholder="Search"
+                value={search}
+                onChange={updateSearch}
+              />
+            </NavLink>
 
-      {/* <ExtendedList array={query} /> */}
+            <button type="submit">
+              <img src={search_icon} alt="" className="search icon" />
+            </button>
+          </form>
+        </header>
 
-      {/* {query.map((query) => (
-        <ExtendedCard
-          key={query.id}
-          // title={query.title}
-          img_src={query.poster_path}
-          // rating={query.vote_average}
-          overview={query.overview}
+        <Route
+          path="/"
+          exact
+          component={() => (
+            <Home
+              trending={trending}
+              popular={popular}
+              topRated={topRated}
+              upcoming={upcoming}
+            />
+          )}
         />
-      ))} */}
+        <Route
+          path="/s"
+          exact
+          component={() => <ExtendedList array={query} />}
+        />
 
-      {/* {(query != null) ? query.map((item) => (
-        <ExtendedCard img_src={item.poster_path} overview={item.overview}/>
-      )): ""} */}
-
-      <ExtendedList array={query} />
-
-      <List array={trending} heading="Trending this Week" />
-      <List array={popular} heading="Popular" />
-      <List array={topRated} heading="Top Rated" />
-      <List array={upcoming} heading="Upcoming" />
-      {/* <ExtendedList /> */}
-    </div>
+      </div>
+    </Router>
   );
 }
 

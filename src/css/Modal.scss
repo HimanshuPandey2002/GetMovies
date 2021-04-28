@@ -1,27 +1,28 @@
-.modal{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
+.hide {
+    display: none;
+}
+
+.modal {
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    // background-color: red;
-    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border: 1px solid gray;
     overflow: auto;
+    text-align: left;
+    font-size: 1.2rem;
+    z-index: 100;
 
-    .title{
-        margin: 2rem;
-    }
-
-    .close{
+     .close{
         position: inherit;
-        right: 5%;
-        top: 5%;
+        right: 1%;
+        top: 3%;
         font-size: 30px;
         transform: rotate(45deg);
         border-radius: 100px;
@@ -37,60 +38,52 @@
         background-color: rgba(255, 255, 255, 0.4);
     }
 
-    .details-section{
+    .container{
         display: flex;
-        // background-color: red;
-        padding: 1rem;
-        text-align: left;
-        width: 90%;
-        margin: auto;
+        // background-color: rgba(255, 0, 0, 0.329);
 
-        .image-section{
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-            display: flex;
+        .Details{
+            flex: 2;
+            padding: 2rem;
 
-            img{
-                width: 50%;
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            .title{
+                font-size: 4rem;
+                font-family: 'Fira Sans', sans-serif;
             }
-        }
 
-        .details{
-            flex: 1;
-            // background-color: blue;
-            display: flex;
-            flex-direction: column;
-            // justify-content: space-between;
+            .small-details{
+                color: rgb(248, 107, 138);
+                font-weight: bold;
+                margin: 0.5rem;
+                font-size: 1.5rem;
+            }
 
-            p{
-                margin: 1rem;
-                font-size: 1.2rem;
+            .sub-details{
+                margin: 1rem 0;
 
                 span{
-                    font-weight: bold;
+                    color: rgb(248, 107, 138);
                 }
             }
         }
-    }
 
-    .similar{
-        // overflow-y: scroll;
-        // background-color: green;
-        width: 90%;
-        text-align: left;
-        padding: 1rem;
-        margin: 1rem auto;
-
-        .content{
+        .image{
+            flex: 1;
             display: flex;
-            overflow-y: auto;
-            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            // background-color: red;
+            .poster{
+                width: 70%;
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            }
         }
     }
-}
 
-.hide {
-    display: none;
+    .reviews{
+        // background-color: rgba(65, 105, 225, 0.507);
+        display: flex;
+        overflow: auto;
+    }
 }

@@ -1,9 +1,7 @@
 import '../css/list.css'
-import {Card,ExtendedCard} from "./Card";
-import image from "../assets/images/1917.jpg";
+import Card from "./Card";
 
-export function List({heading, array}) {
-  
+function List({heading, array}) {
 
   return (
     <div className="Movie-List">
@@ -27,29 +25,4 @@ export function List({heading, array}) {
   );
 }
 
-
-export function ExtendedList({array}) {
-  // if(array.length == 0)
-  //   return (
-  //     <div>
-  //       <h1>No Results Found</h1>
-  //     </div>
-  //   )
-  return (
-    <div className="extended-list">
-      {array != null
-        ? array.map((item) => (
-            <ExtendedCard
-              key={item.id}
-              id={item.id}
-              img_src={item.poster_path}
-              release_date={item.release_date}
-              overview={item.overview}
-              title={item.title}
-              rating={item.vote_average}
-            />
-          ))
-        : ""}
-    </div>
-  );
-}
+export  default List
