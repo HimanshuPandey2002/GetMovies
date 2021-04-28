@@ -1,5 +1,6 @@
 import "../css/list.css";
-import ExtendedCard from "./Card";
+import ExtendedCard from "./ExtendedCard";
+import Card from './Card'
 
 function ExtendedList({ array }) {
   if (array == null || array.length == 0)
@@ -12,7 +13,7 @@ function ExtendedList({ array }) {
     <div className="extended-list">
       {array != null
         ? array.map((item) => (
-            <ExtendedCard
+            <Card
               key={item.id}
               id={item.id}
               img_src={item.poster_path}

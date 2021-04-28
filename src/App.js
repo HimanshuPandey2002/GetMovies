@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ExtendedList  from "./components/List";
+import ExtendedList  from "./components/ExtendedList";
 import "./css/header.css";
 import "./App.css";
 import search_icon from "./assets/icons/search.svg";
