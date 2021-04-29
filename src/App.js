@@ -94,7 +94,7 @@ function App() {
       <div className="App">
         <header>
           <NavLink to="/" className="NavLink">
-            <p className="logo">Entertainment</p>
+            <p className="logo">Movie<span>Mania</span></p>
           </NavLink>
           <form className="form" onSubmit={getSearch}>
             <NavLink to="/s" className="NavLink input">

@@ -34,9 +34,10 @@
     width: 95%;
     display: flex;
     align-items: center;
-    justify-content: space-between ;
+    justify-content: center ;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
+    // background-color: red;
     backdrop-filter: blur(3px);
     padding: 2rem;
     overflow: auto;
